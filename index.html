@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyCast | Live Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body class="weather-clear">
+
+  <div class="container">
+
+    <header>
+      <div class="brand">
+        <span class="brand-icon">☁️</span>
+        <span>SkyCast</span>
+      </div>
+      <span class="live-label">● LIVE WEATHER</span>
+    </header>
+
+    <main>
+      <section class="intro">
+        <p class="eyebrow">YOUR DAILY WEATHER COMPANION</p>
+        <h1>Weather made simple.</h1>
+        <p class="subtitle">
+          Discover the weather around the world,
+          one city at a time.
+        </p>
+      </section>
+
+      <section class="controls">
+        <div class="city-control">
+          <label for="citySelect">Choose your city</label>
+          <select id="citySelect">
+            <option value="mississauga">Mississauga, Canada</option>
+            <option value="toronto">Toronto, Canada</option>
+            <option value="vancouver">Vancouver, Canada</option>
+            <option value="newyork">New York, USA</option>
+            <option value="london">London, UK</option>
+          </select>
+        </div>
+
+        <button id="refreshBtn" type="button">
+          ↻ Refresh Weather
+        </button>
+      </section>
+
+      <p id="status" role="status" aria-live="polite">
+        Loading live weather data...
+      </p>
+
+      <section class="weather-card">
+
+        <div class="card-top">
+          <div>
+            <p class="card-label">CURRENT WEATHER</p>
+            <h2 id="cityName">Mississauga</h2>
+            <p id="date">Loading date...</p>
+          </div>
+          <span class="weather-icon" id="weatherIcon">☀️</span>
+        </div>
+
+        <div class="temperature-section">
+          <div class="temperature">
+            <span id="temperature">--</span><span>°C</span>
+          </div>
+          <h3 id="condition">Loading conditions...</h3>
+          <p id="feelsLike">Feels like --°C</p>
+        </div>
+
+        <div class="weather-details">
+          <div class="detail">
+            <span class="detail-icon">💧</span>
+            <p>Humidity</p>
+            <strong id="humidity">--%</strong>
+          </div>
+
+          <div class="detail">
+            <span class="detail-icon">💨</span>
+            <p>Wind Speed</p>
+            <strong id="windSpeed">-- km/h</strong>
+          </div>
+
+          <div class="detail">
+            <span class="detail-icon">🌡️</span>
+            <p>Feels Like</p>
+            <strong id="feelsDetail">--°C</strong>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="advice-card">
+        <div class="advice-heading">
+          <span>✨</span>
+          <h2>Today's Weather Tip</h2>
+        </div>
+        <p id="weatherTip">
+          Your personalized weather suggestion will appear here.
+        </p>
+      </section>
+
+      <section class="forecast-section">
+        <div class="section-heading">
+          <h2>3-Day Forecast</h2>
+          <span>PLAN AHEAD</span>
+        </div>
+
+        <div class="forecast-grid" id="forecast">
+          <p>Loading forecast...</p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>Made with ☁️ by SkyCast</p>
+      <p>
+        Weather data provided by
+        <a href="https://open-meteo.com/" target="_blank"
+           rel="noopener noreferrer">Open-Meteo</a>
+      </p>
+      <p>Lab 6 — Working with API</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
